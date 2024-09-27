@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, settings, ...}:
 
 {
   home-manager.sharedModules = [{
@@ -9,10 +9,10 @@
         name = "default";
         settings = {
           "browser.startup.homepage" = "https://nixos.org";
-          "browser.search.region" = "AT";
+          "browser.search.region" = "${settings.searchRegion}";
           "browser.search.isUS" = false;
-          "distribution.searchplugins.defaultLocale" = "de_AT";
-          "general.useragent.locale" = "de_AT";
+          "distribution.searchplugins.defaultLocale" = "${settings.locale}";
+          "general.useragent.locale" = "${settings.locale}";
           "browser.bookmarks.showMobileBookmarks" = false;
           "browser.newtabpage.pinned" = [{
             title = "NixOS";
