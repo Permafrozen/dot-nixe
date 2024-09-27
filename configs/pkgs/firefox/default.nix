@@ -8,6 +8,7 @@
         id = 0;
         name = "default";
         settings = {
+          
           "browser.startup.homepage" = "https://mynixos.com/";
           "browser.search.region" = "${settings.searchRegion}";
           "browser.search.isUS" = false;
@@ -20,7 +21,7 @@
           }];
         };
         userChrome = ''
-
+          
         '';
       };
     };
