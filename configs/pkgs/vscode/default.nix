@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    vscodium;
+    vscodium
   ]
   home-manager.sharedModules = [{
     programs.vscode = {
