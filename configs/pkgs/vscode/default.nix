@@ -11,6 +11,9 @@
     programs.vscode = {
       enable = true;
       package = pkgs.vscodium;  # Use VSCodium as the VSCode package
+      userSettings = {
+        "window.titleBarStyle" = "custom";
+      };
     };
   };
 }

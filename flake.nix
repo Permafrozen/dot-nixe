@@ -25,6 +25,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
+            backupFileExtension = "backup";
             extraSpecialArgs = { inherit inputs; inherit settings; };
             users.matteo = import ./configs/common/home.nix;
           };
