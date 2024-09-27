@@ -12,6 +12,7 @@
     (getPath "stylix")
     (getPath "swww")
     (getPath "ly")
+    (getPath "lazygit")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER

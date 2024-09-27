@@ -23,7 +23,9 @@ in {
   stylix = stylixConfig;
 
   home-manager.sharedModules = [{
-    stylix = stylixConfig;
+    stylix = stylixConfig // {
+      stylix.targets.vscode.enable = true;
+    };
   }];
 
   environment.systemPackages = with pkgs; [
