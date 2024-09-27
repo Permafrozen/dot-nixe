@@ -10,5 +10,6 @@ in {
     (getPath "stylix")
     (getPath "swww")
     (getPath "ly")
+    (getPath "firefox")
   ];
 }

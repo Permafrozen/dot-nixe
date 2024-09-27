@@ -17,6 +17,7 @@
 
         # Variables
         "$mainMod" = "SUPER";
+        "$browser" = "firefox";
 
         # Monitor Settings
         "monitor"="eDP-1,1920x1080@60,0x0,1";
@@ -95,6 +96,7 @@
         bind = [
           # Important Keybinds
           "$mainMod, T, exec, kitty"
+          "$mainMod, S, exec, $browser"
           "$mainMod, Q, killactive,"
           "$mainMod, M, exit,"
 
