@@ -8,16 +8,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
     settings = import ./hosts/laptop/settings.nix;
+    extensions = inputs.nix-vscode-extensions.extensions.${system};
+    args = { inherit inputs; inherit settings; inherit extensions; };
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit inputs; inherit settings; };
+      specialArgs = args;
       modules = [
         ./configs/common/configuration.nix
         inputs.stylix.nixosModules.stylix
@@ -26,7 +29,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "backup";
-            extraSpecialArgs = { inherit inputs; inherit settings; };
+            extraSpecialArgs = args;
             users.matteo = import ./configs/common/home.nix;
           };
         }
