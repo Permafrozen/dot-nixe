@@ -24,7 +24,7 @@ in {
 
   home-manager.sharedModules = [{
     stylix = stylixConfig // {
-      stylix.targets.vscode.enable = true;
+      targets.vscode.enable = true;
     };
   }];
 

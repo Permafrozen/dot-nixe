@@ -13,6 +13,7 @@
     (getPath "swww")
     (getPath "ly")
     (getPath "lazygit")
+    (getPath "vscode")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
