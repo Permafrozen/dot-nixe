@@ -5,6 +5,8 @@
     vscodium
   ];
 
+  programs.direnv.enable = true;
+
   home-manager.users.${settings.userName} = {
     programs.vscode = {
       enable = true;
