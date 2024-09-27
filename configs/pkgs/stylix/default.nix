@@ -23,9 +23,7 @@ in {
   stylix = stylixConfig;
 
   home-manager.users.${settings.userName} = {
-    stylix = stylixConfig // {
-      targets.vscode.enable = true;
-    };
+    stylix = stylixConfig;
   };
 
   environment.systemPackages = with pkgs; [
