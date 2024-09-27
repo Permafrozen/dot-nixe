@@ -15,5 +15,6 @@
         "window.titleBarStyle" = "custom";
       };
     };
+    stylix.targets.vscode.enable = true;
   };
 }
