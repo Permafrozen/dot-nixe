@@ -1,7 +1,7 @@
 { config, pkgs, settings, ...}:
 
 {
-  home-manager.sharedModules = [{
+  home-manager.users.${settings.userName} = {
     programs = {
       fish = {
         enable = true;
@@ -16,5 +16,5 @@
         '';
       };
     };
-  }];
+  };
 }

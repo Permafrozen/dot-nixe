@@ -1,7 +1,7 @@
 { config, pkgs, settings, ...}:
 
 {
-  home-manager.sharedModules = [{
+  home-manager.users.${settings.userName} = {
     programs.firefox = {
       enable = true;
       profiles.default = {
@@ -24,5 +24,5 @@
         '';
       };
     };
-  }];
+  };
 }

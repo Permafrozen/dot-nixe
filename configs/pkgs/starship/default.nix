@@ -1,7 +1,7 @@
-{ config, pkgs, ...}:
+{ config, pkgs, settings, ...}:
 
 {
-  home-manager.sharedModules = [{
+  home-manager.users.${settings.userName} = {
     programs.starship = {
       enable = true;
       settings = {
@@ -9,5 +9,5 @@
       };
       enableFishIntegration = true;
     };
-  }];
+  };
 }

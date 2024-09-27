@@ -1,4 +1,4 @@
-{ config, pgks, ...}:
+{ config, pgks, settings, ...}:
 
 {
   # Pipewire

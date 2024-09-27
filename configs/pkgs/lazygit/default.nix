@@ -1,12 +1,12 @@
 { config, pkgs, settings, ...}:
 
 {
-  home-manager.sharedModules = [{
+  home-manager.users.${settings.userName} = {
     programs.lazygit = {
       enable = true;
       settings = {
 
       };
     };
-  }];
+  };
 }

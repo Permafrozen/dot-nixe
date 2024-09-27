@@ -1,7 +1,7 @@
 { config, pkgs, settings, ...}:
 
 {
-  home-manager.sharedModules = [{
+  home-manager.users.${settings.userName} = {
     programs.kitty = {
       enable = true;
       settings = {
@@ -12,7 +12,7 @@
         confirm_os_window_close = "0";
       };
     };
-  }];
+  };
   environment.systemPackages = with pkgs; [
     acpi
     bat

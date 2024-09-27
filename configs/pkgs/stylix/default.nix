@@ -22,11 +22,11 @@ let
 in {
   stylix = stylixConfig;
 
-  home-manager.sharedModules = [{
+  home-manager.users.${settings.userName} = {
     stylix = stylixConfig // {
       targets.vscode.enable = true;
     };
-  }];
+  };
 
   environment.systemPackages = with pkgs; [
     base16-schemes
