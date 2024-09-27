@@ -8,7 +8,7 @@
         id = 0;
         name = "default";
         settings = {
-          "browser.startup.homepage" = "https://nixos.org";
+          "browser.startup.homepage" = "https://mynixos.com/";
           "browser.search.region" = "${settings.searchRegion}";
           "browser.search.isUS" = false;
           "distribution.searchplugins.defaultLocale" = "${settings.locale}";
@@ -16,7 +16,7 @@
           "browser.bookmarks.showMobileBookmarks" = false;
           "browser.newtabpage.pinned" = [{
             title = "NixOS";
-            url = "https://nixos.org";
+            url = "https://mynixos.com/";
           }];
         };
         userChrome = ''
