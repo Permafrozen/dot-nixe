@@ -10,5 +10,6 @@
       enable = true;
       package = pkgs.vscodium;  # Use VSCodium as the VSCode package
     };
+    stylix.targets.vscode.enable = true;
   };
 }
