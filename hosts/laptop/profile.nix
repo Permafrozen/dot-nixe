@@ -1,4 +1,4 @@
-{ settings }:
+{ settings, ... }:
   let
     getPath = folderName: ../../configs/pkgs/${folderName}/default.nix;
   in 

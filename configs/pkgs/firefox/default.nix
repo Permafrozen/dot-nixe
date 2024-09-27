@@ -1,13 +1,12 @@
 { config, pkgs, ...}:
 
 {
-  home-manager = [{
+  home-manager.sharedModules = [{
     programs.firefox = {
       enable = true;
       profiles.default = {
         id = 0;
         name = "default";
-        isDefault = true;
         settings = {
           "browser.startup.homepage" = "https://nixos.org";
           "browser.search.region" = "AT";
@@ -20,9 +19,9 @@
             url = "https://nixos.org";
           }];
         };
-        userChrome = {
+        userChrome = ''
 
-        };
+        '';
       };
     };
   }];
