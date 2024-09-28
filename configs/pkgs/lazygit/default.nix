@@ -4,9 +4,8 @@
   home-manager.users.${settings.userName} = {
     programs.lazygit = {
       enable = true;
-      settings = {
-
-      };
+      settings = {};
     };
+    stylix.targets.lazygit.enable = true;
   };
 }
