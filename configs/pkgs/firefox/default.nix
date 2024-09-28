@@ -8,14 +8,44 @@
         id = 0;
         name = "default";
         settings = {
+          # Default Page
           "browser.startup.homepage" = "about:newtab";
           "browser.startup.blankWindow" = true;
+          "browser.startup.page" = 0; # close all tabs after closing
+
+          # Regional Stuff
           "browser.search.region" = "${settings.searchRegion}";
           "browser.search.isUS" = false;
           "distribution.searchplugins.defaultLocale" = "${settings.locale}";
           "general.useragent.locale" = "${settings.locale}";
+
+          # Stuff I don't like
+          "browser.translations.automaticallyPopup" = false;
+          "browser.sessionstore.persist_closed_tabs_between_sessions" = false;
+
+          # Bookmarks
           "browser.bookmarks.showMobileBookmarks" = false;
           "browser.toolbars.bookmarks.visibility" = "never";
+
+          # disable suggestions
+          "browser.urlbar.maxRichResults" = 0;
+
+          # Stuff to disable if using max Rich results
+          "browser.urlbar.suggest.searches" = false;
+          "browser.urlbar.suggest.trending" = false;
+          "browser.urlbar.suggest.recentsearches" = false;
+          "browser.urlbar.suggest.history" = true;
+          "browser.urlbar.suggest.topsites" = false;
+          "browser.urlbar.suggest.bookmark" = false;
+          "browser.urlbar.suggest.openpage" = false;
+          "browser.urlbar.suggest.engines" = false;
+          "browser.urlbar.suggest.addons" = false;
+          "browser.urlbar.suggest.mdn" = false;
+          "browser.urlbar.suggest.pocket" = false;
+          "browser.urlbar.suggest.remotetab" = false;
+          "browser.urlbar.suggest.weather" = false;
+          "browser.urlbar.suggest.yelp" = false;
+          "browser.urlbar.suggest.clipboard" = false;
         };
         userChrome = ''
           html {
