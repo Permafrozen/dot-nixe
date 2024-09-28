@@ -16,5 +16,6 @@
         '';
       };
     };
+    stylix.targets.fish.enable = true;
   };
 }

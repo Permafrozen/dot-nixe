@@ -1,16 +1,20 @@
-{ config, pkgs, settings, ...}:
+{ config, pkgs, settings, lib, ...}:
 
 {
   home-manager.users.${settings.userName} = {
     programs.kitty = {
       enable = true;
       settings = {
-        foreground = "#${config.lib.stylix.colors.base05}";
-        background = "#${config.lib.stylix.colors.base00}";
-        background_opacity = "${settings.opacity}";
-        background_blur = "${settings.blur}";
+        foreground = lib.mkDefault "#${config.lib.stylix.colors.base05}";
+        background = lib.mkDefault "#${config.lib.stylix.colors.base00}";
+        background_opacity = lib.mkForce "${settings.opacity}";
+        background_blur = lib.mkForce "${settings.blur}";
         confirm_os_window_close = "0";
       };
+    };
+    stylix.targets = {
+      kitty.enable = true;
+      bat.enable = true;
     };
   };
   environment.systemPackages = with pkgs; [
