@@ -16,7 +16,7 @@
     (getPath "vscode")
     (getPath "libreoffice")
     (getPath "yazi")
-    (getPath "zellij")
+    (getPath "bottom")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
