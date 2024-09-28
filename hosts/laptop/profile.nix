@@ -14,6 +14,7 @@
     (getPath "ly")
     (getPath "lazygit")
     (getPath "vscode")
+    (getPath "libreoffice")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
