@@ -23,7 +23,11 @@ in {
   stylix = stylixConfig;
 
   home-manager.users.${settings.userName} = {
-    stylix = stylixConfig;
+    stylix = stylixConfig // {
+      targets.gtk.enable = true;
+      targets.gnome.enable = true;
+      targets.kde.enable = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
