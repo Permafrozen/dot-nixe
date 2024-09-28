@@ -8,17 +8,14 @@
         id = 0;
         name = "default";
         settings = {
-          
-          "browser.startup.homepage" = "https://mynixos.com/";
+          "browser.startup.homepage" = "about:newtab";
+          "browser.startup.blankWindow" = true;
           "browser.search.region" = "${settings.searchRegion}";
           "browser.search.isUS" = false;
           "distribution.searchplugins.defaultLocale" = "${settings.locale}";
           "general.useragent.locale" = "${settings.locale}";
           "browser.bookmarks.showMobileBookmarks" = false;
-          "browser.newtabpage.pinned" = [{
-            title = "NixOS";
-            url = "https://mynixos.com/";
-          }];
+          "browser.toolbars.bookmarks.visibility" = "never";
         };
         userChrome = ''
           html {
@@ -140,6 +137,24 @@
           html:not([privatebrowsingmode="temporary"]) .sidebar-panel {
             background-color: transparent !important;
             color: var(--newtab-text-primary-color) !important;
+          }
+        '';
+        userContent = ''
+          @-moz-document url("about:newtab") {
+            body {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+            }
+            .search-wrapper {
+              display: none !important;
+            }
+            .personalizeButtonWrapper {
+              display: none !important;
+            }
+          }
+          @-moz-document url("about:blank") {
+            body {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+            }
           }
         '';
       };
