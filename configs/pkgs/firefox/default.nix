@@ -124,6 +124,10 @@
             max-width: 960px !important;
           }
 
+           #urlbar-input::placeholder {
+            opacity: 0 !important;
+          }
+
           #urlbar:not([breakout-extend]) #urlbar-background {
             background: none !important;
             background-color: transparent !important;
