@@ -24,9 +24,11 @@ in {
 
   home-manager.users.${settings.userName} = {
     stylix = stylixConfig // {
-      targets.gtk.enable = true;
-      targets.gnome.enable = true;
-      targets.kde.enable = true;
+      targets = {
+        gtk.enable = true;
+        gnome.enable = true;
+        kde.enable = true;
+      };
     };
   };
 
