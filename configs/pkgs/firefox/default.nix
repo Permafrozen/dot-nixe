@@ -190,9 +190,24 @@
               background-color: #${config.lib.stylix.colors.base00} !important;
             }
           }
+          @-moz-document url("about:profiles"), url(about:preferences), url(about:config) {
+            body {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+              color: #${config.lib.stylix.colors.base05} !important;
+            }
+          }
           @-moz-document domain(google.com.br), domain(google.com) {
             * {
               background-color: #${config.lib.stylix.colors.base00} !important;
+              border-color: #${config.lib.stylix.colors.base00} !important;
+              color: #${config.lib.stylix.colors.base05} !important;
+            }
+            span {
+              color: #${config.lib.stylix.colors.base04} !important;
+            }
+
+            .RNNXgb {
+              display: none !important;
             }
           } 
         '';
