@@ -190,6 +190,11 @@
               background-color: #${config.lib.stylix.colors.base00} !important;
             }
           }
+          @-moz-document domain(google.com.br), domain(google.com) {
+            * {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+            }
+          } 
         '';
       };
     };
