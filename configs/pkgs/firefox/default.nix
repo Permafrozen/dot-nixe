@@ -196,10 +196,10 @@
               color: #${config.lib.stylix.colors.base05} !important;
             }
           }
-          @-moz-document domain(google.com.br), domain(google.com), domain(github.com) {
+          @-moz-document domain(google.com.br), domain(google.com) {
             * {
               background-color: #${config.lib.stylix.colors.base00} !important;
-              border-color: #${config.lib.stylix.colors.base04} !important;
+              border-color: #${config.lib.stylix.colors.base00} !important;
               color: #${config.lib.stylix.colors.base05} !important;
             }
             span {
@@ -209,7 +209,28 @@
             .RNNXgb {
               display: none !important;
             }
-          } 
+          }
+          @-moz-document domain(github.com) {
+            * {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+              border-color: #${config.lib.stylix.colors.base05} !important;
+              color: #${config.lib.stylix.colors.base05} !important;
+            }
+          }
+          @-moz-document domain(teams.microsoft.com) {
+            * {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+              border-color: #${config.lib.stylix.colors.base00} !important;
+              color: #${config.lib.stylix.colors.base05} !important;
+            }
+          }
+          @-moz-document domain(elearn.htl-wels.at) {
+            * {
+              background-color: #${config.lib.stylix.colors.base00} !important;
+              border-color: #${config.lib.stylix.colors.base00} !important;
+              color: #${config.lib.stylix.colors.base05} !important;
+            }
+          }
         '';
       };
     };
