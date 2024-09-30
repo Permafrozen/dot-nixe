@@ -17,6 +17,7 @@
     (getPath "libreoffice")
     (getPath "yazi")
     (getPath "bottom")
+    (getPath "obsidian")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
