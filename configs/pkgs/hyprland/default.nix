@@ -151,9 +151,9 @@
         };
       };
 
-      # extraConfig = ''
-      #   monitor=eDP-1,1920x1080@60,0x0,1
-      # '';
+      extraConfig = ''
+        monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1 
+      '';
     };
   };
 }
