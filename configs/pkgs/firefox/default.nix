@@ -7,7 +7,17 @@
       profiles.default = {
         id = 0;
         name = "default";
+        extensions = with config.nur.repos.rycee.firefox-addons; [
+          privacy-badger
+          sidebery
+          tabliss
+          ublock-origin
+          
+        ];
         settings = {
+          # Enable all Extensions
+          "extensions.autoDisableScopes" = 0;
+
           # Default Page
           "browser.startup.homepage" = "about:newtab";
           "browser.startup.blankWindow" = true;
@@ -174,63 +184,71 @@
           }
         '';
         userContent = ''
-          @-moz-document url("about:newtab") {
-            body {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-            }
-            .search-wrapper {
-              display: none !important;
-            }
-            .personalizeButtonWrapper {
-              display: none !important;
-            }
+         /* General Styles */
+          @-moz-document url("about:newtab"), url("about:blank"), url("about:profiles"), url("about:preferences"), url("about:config") {
+              body {
+                  background-color: #${config.lib.stylix.colors.base00} !important;
+                  color: #${config.lib.stylix.colors.base05} !important;
+              }
+              .search-wrapper, .personalizeButtonWrapper {
+                  display: none !important;
+              }
           }
-          @-moz-document url("about:blank") {
-            body {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-            }
-          }
-          @-moz-document url("about:profiles"), url(about:preferences), url(about:config) {
-            body {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-              color: #${config.lib.stylix.colors.base05} !important;
-            }
-          }
-          @-moz-document domain(google.com.br), domain(google.com) {
-            * {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-              border-color: #${config.lib.stylix.colors.base00} !important;
-              color: #${config.lib.stylix.colors.base05} !important;
-            }
-            span {
-              color: #${config.lib.stylix.colors.base04} !important;
-            }
 
-            .RNNXgb {
-              display: none !important;
-            }
+          /* Google Domains */
+          @-moz-document domain(google.com.br), domain(google.com) {
+              * {
+                  background-color: #${config.lib.stylix.colors.base00} !important;
+                  border-color: #${config.lib.stylix.colors.base00} !important;
+                  color: #${config.lib.stylix.colors.base05} !important;
+              }
+              span {
+                  color: #${config.lib.stylix.colors.base04} !important;
+              }
+              .RNNXgb {
+                  display: none !important;
+              }
           }
+
+          /* GitHub Domain */
           @-moz-document domain(github.com) {
-            * {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-              border-color: #${config.lib.stylix.colors.base05} !important;
-              color: #${config.lib.stylix.colors.base05} !important;
-            }
+              * {
+                  background-color: #${config.lib.stylix.colors.base00} !important;
+                  border-color: #${config.lib.stylix.colors.base05} !important;
+                  color: #${config.lib.stylix.colors.base05} !important;
+              }
           }
+
+          /* Microsoft Teams Domain */
           @-moz-document domain(teams.microsoft.com) {
-            * {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-              border-color: #${config.lib.stylix.colors.base00} !important;
-              color: #${config.lib.stylix.colors.base05} !important;
-            }
+              * {
+                  background-color: #${config.lib.stylix.colors.base00} !important;
+                  border-color: #${config.lib.stylix.colors.base00} !important;
+                  color: #${config.lib.stylix.colors.base05} !important;
+              }
           }
+
+          /* Moodle Domain */
           @-moz-document domain(elearn.htl-wels.at) {
+              * {
+                  background-color: #${config.lib.stylix.colors.base00} !important;
+                  border-color: #${config.lib.stylix.colors.base00} !important;
+                  color: #${config.lib.stylix.colors.base05} !important;
+              }
+          }
+
+          /* Digi4School Domain */
+          @-moz-document domain(digi4school.at) {
             * {
-              background-color: #${config.lib.stylix.colors.base00} !important;
-              border-color: #${config.lib.stylix.colors.base00} !important;
               color: #${config.lib.stylix.colors.base05} !important;
             }
+            #mainNav, html, input {
+                background-color: #${config.lib.stylix.colors.base00} !important;
+                border-color: #${config.lib.stylix.colors.base00} !important;
+                color: #${config.lib.stylix.colors.base05} !important;
+            }
           }
+
         '';
       };
     };
