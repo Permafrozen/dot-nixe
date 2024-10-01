@@ -1,6 +1,7 @@
 { config, pkgs, settings, ...}:
 
 {
+
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -9,6 +10,15 @@
   environment.systemPackages = with pkgs; [
     hyprshot # for screenshots
   ];
+
+  # For Screenshare
+  environment = {
+    variables = {
+      XDG_CURRENT_DESKTOP = "Hyprland";
+      XDG_SESSION_TYPE = "wayland";
+      XDG_SESSION_DESKTOP = "Hyprland";
+    };
+  };
 
   home-manager.users.${settings.userName} = {
     wayland.windowManager.hyprland = {
@@ -70,27 +80,19 @@
           first_launch_animation = "true";
 
           bezier = [
-            "fluent_decel, 0, 0.2, 0.4, 1"
-            "easeOutCirc, 0, 0.55, 0.45, 1"
-            "easeOutCubic, 0.33, 1, 0.68, 1"
-            "easeinoutsine, 0.37, 0, 0.63, 1"
+            "overshoot, 0.01,-0.11,0.23,1.23"
+            "overshoot2, 0.51,0.23,0.23,1.28"
           ];
 
           animation = [
-            # Windows
-            "windowsIn, 1, 3, easeOutCubic, popin 30%" # window open
-            "windowsOut, 1, 3, fluent_decel, popin 70%" # window close.
-            "windowsMove, 1, 2, easeinoutsine, slide" # everything in between, moving, dragging, resizing.
+            # windows in & out
+            "windowsIn, 1, 5, overshoot2, slide"
+            "windowsOut, 1, 5, overshoot2, slide"
+            "windowsMove, 1, 5, overshoot2, slide"
 
-            # Fade
-            "fadeIn, 1, 3, easeOutCubic"
-            "fadeOut, 1, 2, easeOutCubic"
-            "fadeSwitch, 0, 1, easeOutCirc"
-            "fadeShadow, 1, 10, easeOutCirc" 
-            "fadeDim, 1, 4, fluent_decel" 
-            "border, 1, 2.7, easeOutCirc"
-            "borderangle, 1, 30, fluent_decel, once" 
-            "workspaces, 1, 4, easeOutCubic, fade"           
+            # Workspaces in & out
+            "workspacesIn, 1, 6, overshoot, slidefade"
+            "workspacesOut, 1, 6, overshoot, slidefade"
           ];
         };
 
