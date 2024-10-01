@@ -100,6 +100,7 @@
           "$mainMod, S, exec, $browser"
           "$mainMod, Q, killactive,"
           "$mainMod, M, exit,"
+          "$mainMod, F, fullscreen,"
 
           # Screenshot keybinds
           "$mainMod, PRINT, exec, hyprshot -m region"
