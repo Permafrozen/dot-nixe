@@ -20,6 +20,7 @@
     (getPath "obsidian")
     (getPath "quickemu")
     (getPath "vesktop")
+    (getPath "git")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
