@@ -10,7 +10,6 @@
         extensions = with config.nur.repos.rycee.firefox-addons; [
           privacy-badger
           sidebery
-          tabliss
           ublock-origin
           
         ];
