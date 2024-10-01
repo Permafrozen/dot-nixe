@@ -7,7 +7,7 @@
       userName = settings.gitUser;
       userEmail = settings.gitMail;
       extraConfig = {
-        init.defaultBranch = vars.defaultBranch;
+        init.defaultBranch = settings.defaultBranch;
       };
     };
   };
