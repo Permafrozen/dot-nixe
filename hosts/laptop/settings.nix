@@ -13,6 +13,7 @@
   # git settings
   gitUser = "Permafrozen";
   gitMail = "m8tt8o@gmail.com";
+  defaultBranch = "main";
 
   # theme
   wallpaper =   "space.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
