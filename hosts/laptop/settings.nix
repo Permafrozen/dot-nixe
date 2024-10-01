@@ -10,6 +10,10 @@
   locale =      "de_AT";              # I think this one explains itself
   searchRegion = "AT";                # Region for browsing purposes
 
+  # git settings
+  gitUser = "Permafrozen";
+  gitMail = "m8tt8o@gmail.com";
+
   # theme
   wallpaper =   "space.png";          # background image, located in .../assets/wallpaper/ , also write the file ending!
   scheme =      "eris";               # Color Theme (Chose any from the base16-schemes Package)
