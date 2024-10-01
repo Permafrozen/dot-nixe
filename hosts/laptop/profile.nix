@@ -18,6 +18,7 @@
     (getPath "yazi")
     (getPath "bottom")
     (getPath "obsidian")
+    (getPath "quickemu")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
