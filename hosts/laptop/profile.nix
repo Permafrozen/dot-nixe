@@ -21,6 +21,7 @@
     (getPath "quickemu")
     (getPath "vesktop")
     (getPath "git")
+    (getPath "syncthing")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
