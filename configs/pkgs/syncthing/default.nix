@@ -12,12 +12,13 @@
     settings = {
       devices = {
         "josef-laptop" = { id = "NGXEO2S-C3RGM4X-R4FLDPO-DBWVZHJ-OZ46FL3-GYE5XRH-PUYPXEX-7MOPHQI"; };
+        "josef-phone" = { id = "MRFDTFQ-B74R7XY-A2XXIYX-FY5QSXM-V4LS5IE-RONTU6M-V7IEPLH-GN4XVA4"; };
       };
       folders = {
         "Documents/Synced" = {                    # Folder ID in Syncthing, also the name of folder (label) by default
           label = "Schule";
           path = "/home/${settings.userName}/Documents/Synced";    # Which folder to add to Syncthing
-          devices = [ "josef-laptop" ];      # Which devices to share the folder with
+          devices = [ "josef-laptop" "josef-phone" ];      # Which devices to share the folder with
         };
       };
     };
