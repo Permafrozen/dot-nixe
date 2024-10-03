@@ -26,5 +26,6 @@
     tree
     vim
     wget
+    tt
   ];
 }
