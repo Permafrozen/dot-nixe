@@ -10,6 +10,7 @@
         background_opacity = lib.mkForce "${settings.opacity}";
         background_blur = lib.mkForce "${settings.blur}";
         confirm_os_window_close = "0";
+        cursor_shape_unfocused = "unchanged";
       };
     };
     stylix.targets = {
