@@ -4,9 +4,16 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      animation = "matrix";
-      cmatrix_fg = "0x8001";
-      hide_borders = true;
+      # animation
+      animation = "none";
+
+      # decoration
+      hide_borders = false;
+      blank_box = true;
+
+      # misc
+      clear_password = false;
+      text_in_center = true;
     };
   };
 }
