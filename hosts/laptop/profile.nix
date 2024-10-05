@@ -22,7 +22,6 @@
     (getPath "vesktop")
     (getPath "git")
     (getPath "syncthing")
-    (getPath "zed")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
