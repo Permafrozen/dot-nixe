@@ -9,8 +9,8 @@
   </pre>
 </div>
 
-# About
-This is my `nixos` configuration, built with `flakes` and `home-manager`. I plan on heavy usage of `ags` for custom widgets (status bar, app launcher, etc.).
+## About
+This is my `nixos` configuration, built with `flakes` and `home-manager`. I plan on heavy usage of `ags` for custom widgets (status bar, app launcher, etc.) after the launch of `ags v2`. This configuration is using the `unstable` branch for everything because of the availabilty of a lot of packages and services. If you have questions or ideas for improvement feel free to tell me, I am always open for constructive critisism.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -49,8 +49,19 @@ This is my `nixos` configuration, built with `flakes` and `home-manager`. I plan
     ```
 
 ## Usage
-todo
+**Rebuilding your system via flake**
+> [!NOTE]
+> Remeber to be inside the same directory if you use `.`
+```bash
+sudo nixos-rebuild switch --flake .
+```
 
+**Update your flake**
+> [!NOTE]
+> You have to rebuild to use the updated configuration.
+```bash
+nix flake update
+```
 ## Showcase
 todo
 
