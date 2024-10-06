@@ -9,7 +9,7 @@
   </pre>
 </div>
 
-# dot-nixe
+# About
 This is my `nixos` configuration, built with `flakes` and `home-manager`. I plan on heavy usage of `ags` for custom widgets (status bar, app launcher, etc.).
 
 ## Table of Contents
