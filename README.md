@@ -10,7 +10,9 @@
 </div>
 
 ## About
-This is my `nixos` configuration, built with `flakes` and `home-manager`. I plan on heavy usage of `ags` for custom widgets (status bar, app launcher, etc.) after the launch of `ags v2`. This configuration is using the `unstable` branch for everything because of the availabilty of a lot of packages and services. If you have questions or ideas for improvement feel free to tell me, I am always open for constructive critisism.
+This configuration is my daily driver on my laptop. Be careful if you use it.
+> [!IMPORTANT]
+> This is my `nixos` configuration, built with `flakes` and `home-manager`. I plan on heavy usage of `ags` for custom widgets (status bar, app launcher, etc.) after the launch of `ags v2`. This configuration is using the `unstable` branch > for everything because of the availabilty of a lot of packages and services. If you have questions or ideas for improvement feel free to tell me, I am always open for constructive critisism.
 
 ## Table of Contents
 - **[Installation](#installation)**
