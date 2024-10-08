@@ -22,6 +22,7 @@
     (getPath "vesktop")
     (getPath "git")
     (getPath "syncthing")
+    (getPath "ani-cli")
 
     # Variable Apps
     (getPath "${settings.terminal}")  # BROWSER
