@@ -25,8 +25,11 @@
   shadow =        "true";               # Wheater to enable window shadow
   opacity =       "0.7";                # background opacities for supported windows
   blur =          "7";                  # background blur for supported windows
+
+  # Monitor Settings
   hyprConfig = ''
-    monitor= ,preferred, auto, 1 
+    monitor= HDMI-A-1, 1920x1080@60, 0x0, 1
+    monitor= DP-1, 1920x1080@60, 1920x0, 1 
   '';
 
   # default apps

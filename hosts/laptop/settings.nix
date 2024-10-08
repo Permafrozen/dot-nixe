@@ -26,6 +26,12 @@
   opacity =       "0.7";                # background opacities for supported windows
   blur =          "7";                  # background blur for supported windows
 
+  # Monitor Settings
+  hyprConfig = ''
+    monitor= eDP-1, 1920x1080@60, 0x0, 1
+    monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1
+  '';
+
   # default apps
   browser =       "firefox";            # only firefox for now
   terminal =      "kitty";              # only kitty for now
