@@ -1,6 +1,11 @@
-{ config, pgks, settings, ...}:
+{ config, pkgs, settings, ...}:
 
 {
+  # pavucontrol
+  environment.systemPackages = with pkgs; [
+    pavucontrol
+  ];
+  
   # Pipewire
   services.pipewire = {
     enable = true;
