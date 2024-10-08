@@ -43,7 +43,6 @@
           gaps_in = "${settings.gaps}";
           gaps_out = "${settings.gaps}";
 
-
           layout = "dwindle";
           allow_tearing = "false";
         };
@@ -152,6 +151,10 @@
           disable_splash_rendering = "true";
           background_color = "0x${config.lib.stylix.colors.base00}";
         };
+
+        windowrulev2 = [
+          "maximize, class:^(mpv)$" # For watching anime
+        ];
       };
 
       extraConfig = ''
