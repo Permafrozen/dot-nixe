@@ -154,6 +154,7 @@
 
         windowrulev2 = [
           "maximize, class:^(mpv)$" # For watching anime
+          "fullscreen, class:^(.qemu-system-x86_64-wrapped)$"
         ];
       };
 
