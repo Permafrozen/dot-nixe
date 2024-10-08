@@ -31,7 +31,7 @@
         "$terminal" = "${settings.terminal}";
 
         # Monitor Settings
-        "monitor"="eDP-1,1920x1080@60,0x0,1";
+        # "monitor"="eDP-1,1920x1080@60,0x0,1";
 
 
         general = {
@@ -158,9 +158,7 @@
         ];
       };
 
-      extraConfig = ''
-        monitor=HDMI-A-1, 1920x1080@60, auto, 1, mirror, eDP-1 
-      '';
+      extraConfig = settings.hyprConfig;
     };
   };
 }
