@@ -218,7 +218,7 @@
               }
           }
 
-          /* Microsoft Teams Domain */
+          /* Microsoft Teams Domain 
           @-moz-document domain(teams.microsoft.com) {
               * {
                   background-color: #${config.lib.stylix.colors.base00} !important;
@@ -226,6 +226,7 @@
                   color: #${config.lib.stylix.colors.base05} !important;
               }
           }
+          */
 
           /* Moodle Domain */
           @-moz-document domain(elearn.htl-wels.at) {
