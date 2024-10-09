@@ -228,7 +228,7 @@
           }
           */
 
-          /* Moodle Domain */
+          /* Moodle Domain 
           @-moz-document domain(elearn.htl-wels.at) {
               * {
                   background-color: #${config.lib.stylix.colors.base00} !important;
@@ -236,6 +236,7 @@
                   color: #${config.lib.stylix.colors.base05} !important;
               }
           }
+          */
 
           /* Digi4School Domain */
           @-moz-document domain(digi4school.at) {
