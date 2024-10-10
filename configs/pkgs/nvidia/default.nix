@@ -14,6 +14,8 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
   };
+  
+  boot.kernelParams = [ "video=1920x1080" ];
 
   services.xserver.videoDrivers = ["nvidia"];
 
