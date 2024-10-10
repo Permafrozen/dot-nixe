@@ -33,4 +33,15 @@
     fi
   '';
   };
+
+  environment.systemPackages = with pkgs; [
+    acpi
+    bat
+    git
+    nurl
+    tree
+    vim
+    wget
+    tt
+  ];
 }
