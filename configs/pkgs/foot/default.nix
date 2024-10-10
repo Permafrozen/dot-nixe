@@ -10,6 +10,13 @@
       enable = true;
       server.enable = true;
       settings = {
+        cursor = {
+          style = "underline";
+          blink = true;
+        };
+        mouse = {
+          hide-when-typing = true;
+        };
         colors = {
           alpha = lib.mkForce "${settings.opacity}";
         };
