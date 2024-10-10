@@ -1,11 +1,19 @@
-{ config, pkgs, settings, ... }:
+{ config, pkgs, settings, lib, ... }:
 
 {
-  home-manger.users.${settings.userName} = {
+  programs.foot = {
+    enableFishIntegration = true;
+  };
+
+  home-manager.users.${settings.userName} = {
     programs.foot = {
       enable = true;
       server.enable = true;
-      settings = {};
+      settings = {
+        colors = {
+          alpha = lib.mkForce "${settings.opacity}";
+        };
+      };
     };
     stylix.targets.foot.enable = true;
   };
