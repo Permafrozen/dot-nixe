@@ -97,7 +97,7 @@
 
         bind = [
           # Important Keybinds
-          "$mainMod, T, exec, kitty"
+          "$mainMod, T, exec, $terminal"
           "$mainMod, S, exec, $browser"
           "$mainMod, Q, killactive,"
           "$mainMod, M, exit,"
