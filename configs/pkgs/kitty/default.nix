@@ -18,14 +18,4 @@
       bat.enable = true;
     };
   };
-  environment.systemPackages = with pkgs; [
-    acpi
-    bat
-    git
-    nurl
-    tree
-    vim
-    wget
-    tt
-  ];
 }
